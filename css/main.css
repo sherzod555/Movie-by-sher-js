@@ -1,0 +1,199 @@
+/* font-family: 'Poppins', sans-serif; */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.content_title{
+    text-align: center;
+    margin: 35px auto;
+}
+
+.box_wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+
+.card_box{
+    max-width: 250px;
+}
+.card_box:hover {
+    /* background-color: rgb(255, 224, 224); */
+    box-shadow: 0 0 10px gray;
+}
+
+
+.movie_img{
+    width: 100%;
+    height: 370px;
+
+}
+
+.country_year
+{
+    display: flex;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9CA3AF;
+    margin-bottom: 12px
+
+}
+
+.country_year span{
+margin-right: 5px;
+}
+
+
+
+
+.movieName{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 12px;
+    height: 50px;
+}
+
+
+.movie_rating,
+.rating_section_left,
+.rating_section_right
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #551A8B;
+gap: 10px;
+}
+
+.rating_section_left img{
+    width: 35px;
+    height: 21px;
+  
+}
+
+
+.genre{
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9CA3AF;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    
+    .container{
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    
+    .content_title{
+        margin: 20px auto;
+    }
+    
+    .box_wrapper{
+ gap: 15px;
+    }
+    
+    .card_box{
+        max-width: 180px;
+    }
+    
+    .movie_img{
+        width: 100%;
+        height: 266px;
+    
+    }
+    
+    .rating_section_left img{
+        width: 30px;
+        height: 16px;
+      
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    
+    
+    .container{
+        max-width: 576px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+
+
+.content_title{
+    margin: 15px auto;
+}
+
+.box_wrapper{
+    gap: 20px;
+}
+
+.card_box{
+    max-width: 180px;
+}
+
+.movie_img{
+    width: 100%;
+    height: 266px;
+
+}
+
+.country_year
+{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+
+.movieName{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 12px;
+    height: 30px;
+}
+
+
+.rating_section_left img{
+    width: 25px;
+    height: 12px;
+  
+}
+
+
+.genre{
+    font-size: 10px;
+    line-height: 14px;
+
+}
+}

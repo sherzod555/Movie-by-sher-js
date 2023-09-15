@@ -15,6 +15,7 @@ const categories = [];
   const wrapperElement = $_(".box_wrapper");
   const genreWrapper = $_(".genres_select");
   const template = $_(".card_box_template").content;
+  const subBtn = $_(".sub_button");
   
 
 const displayMovies = function(movies){
@@ -61,6 +62,14 @@ movies.forEach((movie) => {
   });
 });
 
+searchInput.addEventListener("keyup", (evt) => {
+  const inputValue = new RegExp(evt.target.value, `gi`);
+  const newMovies = movies.filter((movie) => movie.title.match(inputValue));
+
+  displayMovies(newMovies);
+});
+
+
 displayGenres(categories);
 genreWrapper.addEventListener("click", (evt) => {
   evt.preventDefault();
@@ -74,9 +83,28 @@ genreWrapper.addEventListener("click", (evt) => {
   displayMovies(newSelect);
 });
 
-searchInput.addEventListener("keyup", (evt) => {
-  const inputValue = new RegExp(evt.target.value, `gi`);
-  const newMovies = movies.filter((movie) => movie.title.match(inputValue));
 
-  displayMovies(newMovies);
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+///////            The codes below are           ///////     
+///////             taken from ChatGPT           ///////
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+
+const genreSelect = $_("#genres");
+
+subBtn.addEventListener("click", (evt) => {
+  const selectedGenre = genreSelect.value;
+
+  const filteredMovies = movies.filter((movie) => {
+    if (selectedGenre === ALL_CATEGORY_TAB) {
+      return true;
+    }
+    return movie.categories.includes(selectedGenre);
+  });
+
+  displayMovies(filteredMovies);
 });
+

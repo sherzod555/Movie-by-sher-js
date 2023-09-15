@@ -17,6 +17,10 @@
     margin: 0 auto;
 }
 
+.kinda_header{
+    display: flex;
+    align-items: center;
+}
 
 .content_title{
     text-align: center;

@@ -20,9 +20,25 @@
     <div class="container">
 
         <h1 class="content_title">Popular movies</h1>
+<div class="kinda_header">
+        <div>
+            <input type="search" class="search_input" placeholder="Enter Movie Name">
+        </div>
+        <div class="genre_selection_wrapper">
+            <select class="genres_select" name="genres" id="genres">
+                <template class="genre_template">           
+                    <option class="genre_option">All</option>
+                </template>
+            </select>
+        </div>
+       
+        <div>
+            <button type="submit">Submit filters</button>
+        </div>
+    </div>
 
         <section class="box_wrapper">
-
+            
             <template class="card_box_template">
                 <div class="card_box">
                     <img class="movie_img" src="http://i3.ytimg.com/vi/4hZi5QaMBFc/maxresdefault.jpg" alt="movie-image">
